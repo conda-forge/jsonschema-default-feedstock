@@ -1,13 +1,13 @@
 {% set name = "jsonschema-default" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jsonschema-default-{{ version }}.tar.gz
-  sha256: 15cdc750dd3c77a0f1671add4fd877167d4f19e98f723db429beb6712e451e8d
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: c653ec0e5011fa7514f83442fba5813625c9af80cc535708d53c2eeebadf064b
 
 build:
   noarch: python
