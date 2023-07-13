@@ -1,11 +1,11 @@
-About jsonschema-default
-========================
+About jsonschema-default-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jsonschema-default-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mnboos/jsonschema-default
 
 Package license: AGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jsonschema-default-feedstock/blob/main/LICENSE.txt)
 
 Summary: Create default objects from a JSON schema
 
