@@ -1,5 +1,6 @@
 {% set name = "jsonschema-default" %}
 {% set version = "1.6.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
