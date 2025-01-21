@@ -18,7 +18,8 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - poetry
+    # max version on poetry until pyproject.toml tool.poetry.homepage is a valid URI
+    - poetry <1.6
   run:
     - loguru >=0.7.0
     - python >={{ python_min }}
