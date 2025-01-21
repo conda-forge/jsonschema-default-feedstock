@@ -1,27 +1,29 @@
 {% set name = "jsonschema-default" %}
 {% set version = "1.6.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: c653ec0e5011fa7514f83442fba5813625c9af80cc535708d53c2eeebadf064b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
-    - poetry
+    # max version on poetry until pyproject.toml tool.poetry.homepage is a valid URI
+    - poetry <1.6
   run:
     - loguru >=0.7.0
-    - python >=3.7
+    - python >={{ python_min }}
     - rstr >=3.2.1
 
 test:
@@ -31,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/mnboos/jsonschema-default
