@@ -21,9 +21,8 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - loguru >=0.7.0
     - python >={{ python_min }}
-    - rstr >=3.2.1
+    - rstr ==3.2.2
 
 test:
   imports:
