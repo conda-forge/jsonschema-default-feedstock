@@ -1,5 +1,5 @@
 {% set name = "jsonschema-default" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,23 +8,21 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c653ec0e5011fa7514f83442fba5813625c9af80cc535708d53c2eeebadf064b
+  sha256: bf94ffe9f9131571a70dbf4ac89ba83d99ff1c0830d04d7646a37f5cc54de22a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
+    - hatchling
     - pip
-    # max version on poetry until pyproject.toml tool.poetry.homepage is a valid URI
-    - poetry <1.6
+    - python {{ python_min }}
   run:
-    - loguru >=0.7.0
     - python >={{ python_min }}
-    - rstr >=3.2.1
+    - rstr ==3.2.2
 
 test:
   imports:
