@@ -1,5 +1,5 @@
 {% set name = "jsonschema-default" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 511da963cecf19db262e2c797ac48f281c38168fa7eff3681faee6469e5cfe71
+  sha256: 77e35e4a95519c7dbdbe25438c00af33c17bb766cbb0a29a2aa9d645ee3c1399
 
 build:
   noarch: python
